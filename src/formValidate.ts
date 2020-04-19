@@ -1,3 +1,4 @@
+import numeral from 'numeral';
 import { stringRex, numberRex, emailRex, camel2title } from 'utils';
 
 interface ValidationResult {
@@ -26,13 +27,26 @@ export const validateInput = (e: any): ValidationResult => {
       const emailRexResult = emailRex.test(value);
       return {
         valid: emailRexResult,
-        message: emailRexResult ? '' : 'Enter an valid email',
+        message: emailRexResult ? '' : 'Enter a valid email',
       };
     case 'number':
+      let isValid = true;
+      let message = '';
       const numberRexResult = numberRex.test(value);
+      if (!numberRexResult) {
+        message = 'Enter a valid number';
+      }
+
+      if (numberRexResult && name === 'amount') {
+        const amountToBeSent = numeral(value).value();
+        isValid = amountToBeSent > 250;
+        if (!isValid) {
+          message = 'Min amount is $250';
+        }
+      }
       return {
-        valid: numberRexResult,
-        message: numberRexResult ? '' : 'Enter number only',
+        valid: numberRexResult && isValid,
+        message,
       };
     case 'select':
     case 'select-one':
