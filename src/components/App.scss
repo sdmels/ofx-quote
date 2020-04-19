@@ -1,0 +1,23 @@
+.quote {
+  padding: 1.5rem;
+  // background-color: #f8f9fa !important;
+}
+
+// form {
+//   background-color: #fff;
+// }
+
+.quote-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .customer_rate,
+  .details {
+    width: 225px;
+
+    .bold {
+      font-size: 3rem;
+    }
+  }
+}
