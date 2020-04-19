@@ -1,4 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# OFX Get Quote
+
+This is sample POC project that has been build to demonstate the ability of my tecinical skill set in React eco systm. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Library used
+
+### IDE setup
+
+[VS Code](https://code.visualstudio.com/) is used to develop this project
+
+#### Plugins used
+
+- [ESLint](https://eslint.org/) - Find and fix problems in your JavaScript code
+- [Prettier Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - It is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary. Prettier does exdents the `eslint-config-prettier` and `eslint-plugin-prettier`
+- [pretty-quick](https://github.com/azz/pretty-quick) - Runs code formatting on files changes.
+- [husky](https://github.com/typicode/husky) - Pre commit Hook - Husky can prevent bad `git commit` and `git push`
+
+#### 3rd Party packages
+
+- [reactstrap](https://reactstrap.github.io/) - Easy to use React Bootstrap 4 components
+- [Bootstrap]() - Just for the styles.
+- [numeral](http://numeraljs.com/) - A javascript library for formatting and manipulating numbers.
+- [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) - DOM bindings for React Router.
+- [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
+- [scss](https://sass-lang.com/) - CSS preprocessor. Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+
+### Archtecture
+
+Tried to use the new evolving concept of Hook. `useReducer` and `useContext` has been used to share the data between component. As this is a very simple project I don't see the need for full state management like `redux`
+
+### Folder Structure
+
+Kept the files just 2 level depth from the project `src` folder. Enabled absolute import for more code readability.
+
+## Improvements
+
+    1. Form validation - Better way to handle amount field
+    2. Country code dropdown. Based on the time consumption. I have just hard coded to AUS. It needs to be exted
+    3. Ehance types for few objects
+    4. Unit Test to be added
+    5. Format/Parse the amount display in the amount field
+    6. Extend the from/to current dropdown to cover more countries
+    7. Change forms from reactstrap to formik or react-hook-form
+
+## Install
+
+    $ git clone https://github.com/sdmels/ofx-quote.git
+    $ cd ofx-quote
+    $ npm install
 
 ## Available Scripts
 
@@ -42,4 +90,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-"# ofx-quote" 
+"# ofx-quote"
