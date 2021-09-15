@@ -16,7 +16,7 @@ import {
   Row,
 } from 'reactstrap';
 
-import { quoteReducer, quoteInitialState } from '../../reducer/quote';
+import { quoteReducer, quoteInitialState, SET_STATE } from '../../reducer/quote';
 import { FETCH_SUCCESS, FETCH_ERROR, SET_LOADING, SET_REQUIRED_AMOUNT } from '../../reducer/app';
 import { validateInput } from '../../formValidate';
 
@@ -35,7 +35,7 @@ const Quote = () => {
     const result = validateInput(evt);
 
     disptach({
-      type: 'SET_STATE',
+      type: SET_STATE,
       payload: {
         name,
         value,
