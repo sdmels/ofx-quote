@@ -15,7 +15,7 @@
     "@types/reactstrap": "^8.4.2",
     "axios": "^0.21.2",
     "bootstrap": "^4.4.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "numeral": "^2.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
